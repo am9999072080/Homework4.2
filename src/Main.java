@@ -84,8 +84,8 @@ public class Main {
 
     public static void task7() {
         System.out.println("Задача-7");
-        int mothDays = 31;
-        for (int i = 2; i <= mothDays; i += 7) {
+        int monthDays = 31;
+        for (int i = 2; i <= monthDays; i += 7) {
             System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
         }
     }
