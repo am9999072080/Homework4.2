@@ -50,7 +50,7 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача-4");
-        double totalAmount = 15000;
+        double totalAmount = 15_000;
         int finalAmount = 12_000_000;
         double per = 0.07;
         for (int month = 1; totalAmount <= finalAmount; month++) {
@@ -62,7 +62,7 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задача-5");
-        double totalAmount = 15000;
+        double totalAmount = 15_000;
         int finalAmount = 12_000_000;
         double per = 0.07;
         for (int month = 1; totalAmount <= finalAmount; month++) {
@@ -76,7 +76,7 @@ public class Main {
 
     public static void task6() {
         System.out.println("Задача-6");
-        double totalAmount = 15000;
+        double totalAmount = 15_000;
         double per = 0.07;
         for (int i = 1; ; i++) {
             totalAmount = totalAmount + totalAmount * per;
@@ -100,8 +100,8 @@ public class Main {
 
     public static void task8() {
         System.out.println("Задача-8");
-        int theLast200Years = 2023 - 200;
-        int forTheNext100Years = 2023 + 100;
+        int theLast200Years = 2_023 - 200;
+        int forTheNext100Years = 2_023 + 100;
         int cometIsPassing = 79;
         for (int year = 0; year <= forTheNext100Years; year = year + cometIsPassing) {
             if (year >= theLast200Years) {
