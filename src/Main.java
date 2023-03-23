@@ -14,11 +14,12 @@ public class Main {
         System.out.println("Задача-1");
         int total = 0;
         int salary = 15_000;
-        int i = 0;
-        while (total <= 2_459_000) {
+        int month = 0;
+        int totalAmount = 2_459_000;
+        while (total <= totalAmount) {
             total = total + salary;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
-            i++;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+            month++;
         }
     }
 
@@ -39,42 +40,49 @@ public class Main {
         System.out.println();
         System.out.println("Задача-3");
         int population = 12_000_000;
-        int deathsOfThePopulation = population / 1_000 * 8;
-        int birthOfPopulation = population / 1_000 * 17;
         int year = 1;
         for (; year <= 10; year++) {
-            population = population + birthOfPopulation - deathsOfThePopulation;
+            int birthOfPopulation = population / 1_000 * 9;
+            population = population + birthOfPopulation;
             System.out.println("Год " + year + ", численность населения составляет " + population);
         }
     }
 
     public static void task4() {
         System.out.println("Задача-4");
-        int totalAmount = 15000;
-        for (int month = 1; totalAmount <= 12_000_000; month++) {
-            totalAmount = totalAmount + totalAmount * 7 / 100;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalAmount + " рублей");
+        double totalAmount = 15_000;
+        int finalAmount = 12_000_000;
+        double per = 0.07;
+        for (int month = 1; totalAmount <= finalAmount; month++) {
+            totalAmount = totalAmount + totalAmount * per;
+            String result = String.format("%.2f", totalAmount);
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + result + " рублей");
         }
     }
 
     public static void task5() {
         System.out.println("Задача-5");
-        int totalAmount = 15000;
-        for (int month = 1; totalAmount <= 12_000_000; month++) {
-            totalAmount = totalAmount + totalAmount * 7 / 100;
+        double totalAmount = 15_000;
+        int finalAmount = 12_000_000;
+        double per = 0.07;
+        for (int month = 1; totalAmount <= finalAmount; month++) {
+            totalAmount = totalAmount + totalAmount * per;
             if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", сумма накоплений равна " + totalAmount + " рублей");
+                String result = String.format("%.2f", totalAmount);
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + result + " рублей");
             }
         }
     }
 
     public static void task6() {
         System.out.println("Задача-6");
-        int totalAmount = 15000;
+        double totalAmount = 15_000;
+        double per = 0.07;
         for (int i = 1; ; i++) {
-            totalAmount = totalAmount + totalAmount * 7 / 100;
+            totalAmount = totalAmount + totalAmount * per;
             if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", сумма накоплений равна " + totalAmount + " рублей");
+                String result = String.format("%.2f", totalAmount);
+                System.out.println("Месяц " + i + ", сумма накоплений равна " + result + " рублей");
             }
             if (i == 9 * 12) {
                 break;
@@ -92,11 +100,12 @@ public class Main {
 
     public static void task8() {
         System.out.println("Задача-8");
-        int theLast200Years = 2023 - 200;
-        int forTheNext100Years = 2023 + 100;
-        for (int i = 0; i <= forTheNext100Years; i = i + 79) {
-            if (i >= theLast200Years) {
-                System.out.println(i);
+        int theLast200Years = 2_023 - 200;
+        int forTheNext100Years = 2_023 + 100;
+        int cometIsPassing = 79;
+        for (int year = 0; year <= forTheNext100Years; year = year + cometIsPassing) {
+            if (year >= theLast200Years) {
+                System.out.println(year);
             }
         }
     }
