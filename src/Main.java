@@ -39,10 +39,13 @@ public class Main {
     public static void task3() {
         System.out.println();
         System.out.println("Задача-3");
+        int deathsPer1000People = 8;
+        int birthRatePer1000People = 17;
+        int birthRateTotal = birthRatePer1000People - deathsPer1000People;
         int population = 12_000_000;
         int year = 1;
         for (; year <= 10; year++) {
-            int birthOfPopulation = population / 1_000 * 9;
+            int birthOfPopulation = population / 1000 * birthRateTotal;
             population = population + birthOfPopulation;
             System.out.println("Год " + year + ", численность населения составляет " + population);
         }
@@ -76,6 +79,7 @@ public class Main {
 
     public static void task6() {
         System.out.println("Задача-6");
+        int totalNumberOfMonths = 9 * 12;
         double totalAmount = 15_000;
         double per = 0.07;
         for (int i = 1; ; i++) {
@@ -84,7 +88,7 @@ public class Main {
                 String result = String.format("%.2f", totalAmount);
                 System.out.println("Месяц " + i + ", сумма накоплений равна " + result + " рублей");
             }
-            if (i == 9 * 12) {
+            if (i == totalNumberOfMonths) {
                 break;
             }
         }
@@ -100,8 +104,9 @@ public class Main {
 
     public static void task8() {
         System.out.println("Задача-8");
-        int theLast200Years = 2_023 - 200;
-        int forTheNext100Years = 2_023 + 100;
+        int thisYear = 2_023;
+        int theLast200Years = thisYear - 200;
+        int forTheNext100Years = thisYear + 100;
         int cometIsPassing = 79;
         for (int year = 0; year <= forTheNext100Years; year = year + cometIsPassing) {
             if (year >= theLast200Years) {
